@@ -1,6 +1,6 @@
 {
   "name": "@eclipse-glsp/config",
-  "version": "2.9.0",
+  "version": "2.10.0-next",
   "description": "Meta package that provides TypeScript, oxlint and oxfmt configurations and common dev dependencies for GLSP projects",
   "keywords": [
     "config",

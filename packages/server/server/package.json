@@ -1,6 +1,6 @@
 {
   "name": "@eclipse-glsp/server",
-  "version": "2.9.0",
+  "version": "2.10.0-next",
   "description": "A js server framework for Eclipse GLSP",
   "keywords": [
     "diagram",

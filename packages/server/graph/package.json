@@ -1,6 +1,6 @@
 {
   "name": "@eclipse-glsp/graph",
-  "version": "2.9.0",
+  "version": "2.10.0-next",
   "description": "The typescript implementation of the GLSP graphical model (GModel)",
   "keywords": [
     "diagram",

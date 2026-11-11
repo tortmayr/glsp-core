@@ -1,6 +1,6 @@
 {
   "name": "@eclipse-glsp/oxlint-config",
-  "version": "2.9.0",
+  "version": "2.10.0-next",
   "description": "Shared oxlint configuration for GLSP projects",
   "keywords": [
     "eclipse",

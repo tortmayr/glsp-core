@@ -1,6 +1,6 @@
 {
   "name": "@eclipse-glsp/oxfmt-config",
-  "version": "2.9.0",
+  "version": "2.10.0-next",
   "description": "Shared oxfmt configuration for GLSP projects",
   "keywords": [
     "eclipse",

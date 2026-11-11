@@ -1,6 +1,6 @@
 {
   "name": "@eclipse-glsp-examples/workflow-e2e",
-  "version": "2.9.0",
+  "version": "2.10.0-next",
   "description": "Shared page objects and integration-agnostic tests for the GLSP workflow example",
   "keywords": [
     "diagram",
