@@ -1,6 +1,6 @@
 {
   "name": "workflow-standalone",
-  "version": "2.9.0-next",
+  "version": "2.9.0",
   "private": true,
   "description": "Standalone browser-app for the Workflow example",
   "keywords": [
