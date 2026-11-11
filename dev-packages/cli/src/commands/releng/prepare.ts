@@ -225,7 +225,7 @@ function updateChangelog(options: PrepareReleaseOptions): void {
 
 function commitAndPushChanges(options: PrepareReleaseOptions): void {
     LOGGER.info('Commit changes ...');
-    const branchName = isNextVersion(options.version) ? `nightly-${options.version}` : `release-v${options.version}`;
+    const branchName = releaseBranch(options.version);
     const commitMsg = isNextVersion(options.version) ? `Switch to nightly ${options.version} versions` : `v${options.version}`;
     createBranch(branchName);
     commitChanges(commitMsg, options.repoDir);
@@ -237,6 +237,10 @@ function commitAndPushChanges(options: PrepareReleaseOptions): void {
     } else {
         LOGGER.info('Skipping push of changes to remote repository.');
     }
+}
+
+function releaseBranch(version: string): string {
+    return isNextVersion(version) ? `nightly-${version}` : `release-v${version}`;
 }
 
 function createReleasePR(options: PrepareReleaseOptions): void {
@@ -267,10 +271,8 @@ ${footer}
         const bodyFile = 'pr_body.txt';
         const prTitle = isNextVersion(options.version) ? `Switch to nightly ${options.version} versions` : `Release v${options.version}`;
         writeFile(bodyFile, body);
-        // Create pull request
-
-        // --repo keeps gh from opening the PR against the parent of a fork
-        let ghCommand = `gh pr create --repo ${getGitHubSlug(options.repoDir)} --title "${prTitle}" --body-file ${bodyFile} --base ${base}`;
+        // --repo keeps gh from targeting the parent of a fork; --head because the pushed branch has no upstream
+        let ghCommand = `gh pr create --repo ${getGitHubSlug(options.repoDir)} --head ${releaseBranch(options.version)} --title "${prTitle}" --body-file ${bodyFile} --base ${base}`;
         if (options.draft) {
             ghCommand = ghCommand.concat(' --draft');
             LOGGER.debug('Create draft pull request');
