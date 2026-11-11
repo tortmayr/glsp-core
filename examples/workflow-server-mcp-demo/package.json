@@ -1,6 +1,6 @@
 {
   "name": "@eclipse-glsp-examples/workflow-server-mcp-demo",
-  "version": "2.9.0-next",
+  "version": "2.9.0",
   "private": true,
   "description": "Browser demo that drives the @eclipse-glsp/server-mcp portable Fetch handler against the workflow web server bundle.",
   "keywords": [

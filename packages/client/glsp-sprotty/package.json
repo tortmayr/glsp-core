@@ -1,6 +1,6 @@
 {
   "name": "@eclipse-glsp/sprotty",
-  "version": "2.9.0-next",
+  "version": "2.9.0",
   "description": "Augmented reexport of the sprotty API for GLSP",
   "keywords": [
     "diagram",
