@@ -1,6 +1,6 @@
 {
   "name": "glsp-core",
-  "version": "2.9.0-next",
+  "version": "2.9.0",
   "private": true,
   "description": "Core framework of the Graphical Language Server Platform (GLSP): diagram client, TypeScript/Node server, protocol, development tooling and the Workflow examples",
   "homepage": "https://www.eclipse.org/glsp/",

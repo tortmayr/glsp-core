@@ -1,6 +1,6 @@
 {
   "name": "@eclipse-glsp/cli",
-  "version": "2.9.0-next",
+  "version": "2.9.0",
   "description": "CLI Tooling & scripts for GLSP components",
   "keywords": [
     "cli",

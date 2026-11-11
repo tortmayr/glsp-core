@@ -2,7 +2,7 @@
 
 Entries are grouped by component (Protocol, Client, Server, Dev Packages, E2E) per release.
 
-## v2.9.0 - active
+## [v2.9.0 - 11/11/2026](https://github.com/eclipse-glsp/glsp-core/releases/tag/v2.9.0)
 
 ### Protocol
 
