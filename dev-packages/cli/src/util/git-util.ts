@@ -31,7 +31,7 @@ export function isGitRepository(path?: string): boolean {
 }
 
 export function getGitRoot(path?: string): string {
-    const fileString = exec('git rev-parse --show-toplevel', { cwd: path });
+    const fileString = exec('git rev-parse --show-toplevel', { cwd: path, silent: true });
     return resolve(fileString);
 }
 
@@ -195,6 +195,19 @@ export function hasBranch(branch: string, path?: string): boolean {
 
 export function getRemoteUrl(path?: string): string {
     return exec('git config --get remote.origin.url', { cwd: path });
+}
+
+/** Returns `<owner>/<repo>` of a GitHub remote URL (https or ssh). */
+export function parseGitHubSlug(remoteUrl: string): string {
+    const match = remoteUrl.trim().match(/github\.com[/:]([^/]+\/[^/]+?)(\.git)?\/?$/);
+    if (!match) {
+        throw new Error(`Not a GitHub remote: ${remoteUrl}`);
+    }
+    return match[1];
+}
+
+export function getGitHubSlug(path?: string): string {
+    return parseGitHubSlug(exec('git config --get remote.origin.url', { cwd: path, silent: true }));
 }
 
 export function getCurrentBranch(path?: string): string {
